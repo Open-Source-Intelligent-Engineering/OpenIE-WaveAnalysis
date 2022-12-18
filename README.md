@@ -1,37 +1,12 @@
 # OpenIE-WaveAnalysis
+## 1 介绍
+* OpenIE信号处理特征工程中所使用到的波形分析（时域分析、频域分析）
+* 频域分析是按照频率观察信号特征。在一般情况下，我们分析信号习惯从时域方向开始，因为时域的分析更加直观，但频域的表示更加简洁，从这方面去分析对信号了解更加深刻。通过分析振动信号的频域特征准确地表征信号频谱信息，然后获悉在不同工况下部件运行时的健康状态。目前常用的频域特征参数包括重心频率、平均频率、均方根频率以及频率标准差。进行频域分析通常利用傅里叶变换开始。
 
-#### 介绍
-OpenIE信号处理特征工程中所使用到的波形分析（时域分析、频域分析）
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 2 环境配置
+```bash
+# 使用miniconda创建Python环境
+conda create --name openie python=3.8
+# 安装Pyhton依赖
+pip install -r requirements.txt
+```
