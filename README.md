@@ -7,6 +7,8 @@
 ```bash
 # 使用miniconda创建Python环境
 conda create --name openie python=3.8
+# 启动conda环境
+conda activate openie
 # 安装Pyhton依赖
 pip install -r requirements.txt
 ```
