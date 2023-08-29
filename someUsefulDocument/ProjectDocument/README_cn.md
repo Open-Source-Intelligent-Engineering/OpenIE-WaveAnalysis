@@ -22,3 +22,17 @@
 | Step 7 模型优化 | 根据评估结果，可能需要对模型进行进一步优化。这可能包括调整特征选择、尝试不同的模型算法、处理数据不平衡等。 |
 | Step 8 模型部署和监控 | 一旦满意模型的性能，可以将其部署到生产环境中，并持续监控模型的表现，以确保模型在实际应用中的效果。 |
 | Step 9 迭代和改进 | 数据科学是一个迭代的过程。根据实际应用中的反馈，持续优化模型，改进特征工程和模型选择。 |
+
+### 0x03 导入数据/绘制数据图像/数据处理
+```mathematica
+readMachineSignal[csvFileName_] := Module[{data},
+  (*获取当前Notebook文件所在的文件夹地址*)
+  currentDirectory = NotebookDirectory[];
+  (*构建CSV和DAT文件的完整路径*)
+  csvFilePath = 
+   FileNameJoin[{currentDirectory, "machineData", csvFileName}];
+  data = Import[csvFilePath, "CSV"];
+  data
+  ]
+```
+![](../ProjectPicture/SignalPlot.png)
