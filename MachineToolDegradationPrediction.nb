@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12536,        319]
-NotebookOptionsPosition[     11135,        288]
-NotebookOutlinePosition[     11551,        305]
-CellTagsIndexPosition[     11508,        302]
+NotebookDataLength[     11350,        281]
+NotebookOptionsPosition[     10054,        252]
+NotebookOutlinePosition[     10495,        270]
+CellTagsIndexPosition[     10452,        267]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,14 +22,14 @@ Notebook[{
 Cell[CellGroupData[{
 Cell["OpenIE \:5f00\:6e90\:667a\:6167\:5de5\:7a0b", "Title",
  CellChangeTimes->{{3.9021962210729694`*^9, 
-  3.902196249236627*^9}},ExpressionUUID->"92fd93a5-3d54-4da1-a100-\
-381a5e035690"],
+  3.902196249236627*^9}},ExpressionUUID->"5e7484a9-d64a-438c-9025-\
+106927d3c606"],
 
 Cell["\:52a0\:5de5\:4e2d\:5fc3\:5200\:5177\:78e8\:635f\:91cf\:9884\:6d4b\:53ca\
 \:5176\:5de5\:4e1a\:5e94\:7528", "Subtitle",
  CellChangeTimes->{{3.902196279569437*^9, 
-  3.9021963064705114`*^9}},ExpressionUUID->"bf1aebb1-1f5b-4c55-90b2-\
-4783ae71c5d5"],
+  3.9021963064705114`*^9}},ExpressionUUID->"e3eed2d4-ec1a-42db-84f7-\
+b0d64eea4d82"],
 
 Cell[CellGroupData[{
 
@@ -37,8 +37,8 @@ Cell["Section 1 Import Data from \[OpenCurlyDoubleQuote]*.csv\
 \[CloseCurlyDoubleQuote] file", "Section",
  CellChangeTimes->{{3.90219719459752*^9, 3.9021972063954363`*^9}, {
   3.9022044448992968`*^9, 
-  3.9022044733486404`*^9}},ExpressionUUID->"08b83838-5849-401c-9d75-\
-d6d3412dbbdc"],
+  3.9022044733486404`*^9}},ExpressionUUID->"fb0cddd4-eeb9-422e-8e24-\
+02d41492cdc5"],
 
 Cell["\<\
 Step 1: Define a function for read \[OpenCurlyDoubleQuote]*.csv\
@@ -46,175 +46,182 @@ Step 1: Define a function for read \[OpenCurlyDoubleQuote]*.csv\
 \>", "Text",
  CellChangeTimes->{{3.902268316179364*^9, 3.902268355103919*^9}, {
   3.9022855120480824`*^9, 
-  3.902285516002076*^9}},ExpressionUUID->"6311fa63-39c4-4a6c-8976-\
-558d3a651bb2"],
+  3.902285516002076*^9}},ExpressionUUID->"5fbb83e2-2276-4fac-a894-\
+93c64b4961c4"],
 
 Cell[BoxData[{
  RowBox[{"Get", "[", 
   RowBox[{
-   RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+   RowBox[{"NotebookDirectory", "[", "]"}], " ", "<>", " ", 
    "\"\<readMachineSignal.wl\>\""}], "]"}], "\n", 
+ RowBox[{}], "\n", 
  RowBox[{"readMachineSignal", "[", "\"\<CSVfileName\>\"", "]"}]}], "Code",
- CellChangeTimes->{{3.902285480495495*^9, 
-  3.902285501990673*^9}},ExpressionUUID->"a72415c7-24fc-4e6c-a807-\
-6d50d24331cf"],
+ CellChangeTimes->{{3.902285480495495*^9, 3.902285501990673*^9}, 
+   3.9022888353494515`*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"6bfda064-3f2c-4c30-9a46-70b8a62665b6"],
 
 Cell["Step 2: Plot the data with 3 rows and 2 colons graph", "Text",
  CellChangeTimes->{{3.9022683738859873`*^9, 3.902268425152521*^9}, {
   3.9022855206451397`*^9, 
-  3.902285527425378*^9}},ExpressionUUID->"9cba0299-d351-4bfc-8c33-\
-4443eb78ca11"],
+  3.902285527425378*^9}},ExpressionUUID->"8074f8fe-fe53-4bc1-86a8-\
+608002c08d23"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"plotMachineSignal", "[", "data_", "]"}], ":=", 
+  RowBox[{"plotMachineSignal", "[", "data_", "]"}], " ", ":=", "\n", "    ", 
   RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", "}"}], ",", "\n", "        ", 
     RowBox[{
-     RowBox[{"smcAC", "=", 
+     RowBox[{"smcAC", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"smcDC", "=", 
+         RowBox[{"All", ",", " ", "2"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"smcDC", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "3"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vibTable", "=", 
+         RowBox[{"All", ",", " ", "3"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"vibTable", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "4"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vibSpindle", "=", 
+         RowBox[{"All", ",", " ", "4"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"vibSpindle", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "5"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"AETable", "=", 
+         RowBox[{"All", ",", " ", "5"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"AETable", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "6"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"AESpindle", "=", 
+         RowBox[{"All", ",", " ", "6"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"AESpindle", " ", "=", " ", 
       RowBox[{"Rest", "[", 
        RowBox[{"data", "[", 
         RowBox[{"[", 
-         RowBox[{"All", ",", "7"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"smcACPlot", "=", 
+         RowBox[{"All", ",", " ", "7"}], "]"}], "]"}], "]"}]}], ";", "\n", 
+     "        ", 
+     RowBox[{"smcACPlot", " ", "=", " ", 
       RowBox[{"ListPlot", "[", 
-       RowBox[{"smcAC", ",", 
-        RowBox[{"PlotStyle", "->", "Red"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
+       RowBox[{"smcAC", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Red"}], ",", " ", 
+        RowBox[{"Frame", " ", "->", " ", "True"}], ",", " ", "\n", 
+        "            ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
          RowBox[{"{", 
           RowBox[{
-          "\"\<AC spindle motor current\>\"", ",", "\"\<current\>\""}], 
-          "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"smcDCPlot", "=", 
+          "\"\<AC spindle motor current\>\"", ",", " ", "\"\<current\>\""}], 
+          "}"}]}]}], "]"}]}], ";", "\n", "        ", 
+     RowBox[{"smcDCPlot", " ", "=", " ", 
       RowBox[{"ListPlot", "[", 
-       RowBox[{"smcDC", ",", 
-        RowBox[{"PlotStyle", "->", "Green"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
+       RowBox[{"smcDC", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Green"}], ",", " ", 
+        RowBox[{"Frame", " ", "->", " ", "True"}], ",", "\n", "             ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
          RowBox[{"{", 
           RowBox[{
-          "\"\<DC spindle motor current\>\"", ",", "\"\<current\>\""}], 
-          "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"vibTablePlot", "=", 
+          "\"\<DC spindle motor current\>\"", ",", " ", "\"\<current\>\""}], 
+          "}"}]}]}], "]"}]}], ";", "\n", "        ", 
+     RowBox[{"vibTablePlot", " ", "=", " ", 
       RowBox[{"ListPlot", "[", 
-       RowBox[{"vibTable", ",", 
-        RowBox[{"PlotStyle", "->", "Blue"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
+       RowBox[{"vibTable", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Blue"}], ",", " ", 
+        RowBox[{"Frame", " ", "->", "\n", "             ", "True"}], ",", " ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
          RowBox[{"{", 
-          RowBox[{"\"\<Table vibration\>\"", ",", "\"\<vibration\>\""}], 
-          "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"vibSpindlePlot", "=", 
+          RowBox[{"\"\<Table vibration\>\"", ",", " ", "\"\<vibration\>\""}], 
+          "}"}]}]}], "]"}]}], ";", "\n", "        ", 
+     RowBox[{"vibSpindlePlot", " ", "=", " ", 
       RowBox[{"ListPlot", "[", 
-       RowBox[{"vibSpindle", ",", 
-        RowBox[{"PlotStyle", "->", "Purple"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
-         RowBox[{"{", 
-          RowBox[{"\"\<Spindle vibration\>\"", ",", "\"\<vibration\>\""}], 
-          "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"AETablePlot", "=", 
-      RowBox[{"ListPlot", "[", 
-       RowBox[{"AETable", ",", 
-        RowBox[{"PlotStyle", "->", "Orange"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
+       RowBox[{"vibSpindle", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Purple"}], ",", " ", 
+        RowBox[{"Frame", "\n", "             ", "->", " ", "True"}], ",", " ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
          RowBox[{"{", 
           RowBox[{
-          "\"\<Acoustic emission at table\>\"", ",", 
-           "\"\<acoustic emission\>\""}], "}"}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"AESpindlePlot", "=", 
+          "\"\<Spindle vibration\>\"", ",", " ", "\"\<vibration\>\""}], 
+          "}"}]}]}], "]"}]}], ";", "\n", "        ", 
+     RowBox[{"AETablePlot", " ", "=", " ", 
       RowBox[{"ListPlot", "[", 
-       RowBox[{"AESpindle", ",", 
-        RowBox[{"PlotStyle", "->", "Cyan"}], ",", 
-        RowBox[{"Frame", "->", "True"}], ",", 
-        RowBox[{"FrameLabel", "->", 
+       RowBox[{"AETable", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Orange"}], ",", " ", 
+        RowBox[{"Frame", " ", "->", "\n", "             ", "True"}], ",", " ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
          RowBox[{"{", 
           RowBox[{
-          "\"\<Acoustic emission at spindle\>\"", ",", 
-           "\"\<acoustic emission\>\""}], "}"}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
+          "\"\<Acoustic emission at table\>\"", ",", " ", 
+           "\"\<acoustic emission\>\""}], "\n", "            ", "}"}]}]}], 
+       "]"}]}], ";", "\n", "        ", 
+     RowBox[{"AESpindlePlot", " ", "=", " ", 
+      RowBox[{"ListPlot", "[", 
+       RowBox[{"AESpindle", ",", " ", 
+        RowBox[{"PlotStyle", " ", "->", " ", "Cyan"}], ",", " ", 
+        RowBox[{"Frame", " ", "\n", "            ", "->", " ", "True"}], ",", 
+        " ", 
+        RowBox[{"FrameLabel", " ", "->", " ", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<Acoustic emission at spindle\>\"", ",", " ", 
+           "\"\<acoustic emission\>\""}], "\n", "            ", "}"}]}]}], 
+       "]"}]}], ";", "\n", "        ", 
      RowBox[{"GraphicsGrid", "[", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"smcACPlot", ",", "smcDCPlot"}], "}"}], ",", 
+         RowBox[{"smcACPlot", ",", " ", "smcDCPlot"}], "}"}], ",", " ", 
         RowBox[{"{", 
-         RowBox[{"vibTablePlot", ",", "vibSpindlePlot"}], "}"}], ",", 
+         RowBox[{"vibTablePlot", ",", " ", "vibSpindlePlot"}], "}"}], ",", 
+        " ", 
         RowBox[{"{", 
-         RowBox[{"AETablePlot", ",", "AESpindlePlot"}], "}"}]}], "}"}], 
-      "]"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
- CellChangeTimes->{{3.9022652845129814`*^9, 3.9022653536761227`*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"70c4e031-52bd-4500-b7a1-71daabd97c1e"],
+         RowBox[{"AETablePlot", ",", " ", "AESpindlePlot"}], "}"}]}], "}"}], 
+      "]"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9022652845129814`*^9, 3.9022653536761227`*^9}, {
+  3.902343227410783*^9, 
+  3.9023432498816123`*^9}},ExpressionUUID->"3b988dbf-582b-41f5-864c-\
+b31e9f3a60f6"],
 
 Cell[BoxData[
  RowBox[{"For", "[", 
   RowBox[{
-   RowBox[{"i", "=", "1"}], ",", 
-   RowBox[{"i", "<=", "167"}], ",", 
-   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+   RowBox[{"i", " ", "<=", " ", "167"}], ",", " ", 
+   RowBox[{"i", "++"}], ",", "\n", "    ", 
    RowBox[{
-    RowBox[{"inputFileName", "=", 
+    RowBox[{"inputFileName", " ", "=", " ", 
      RowBox[{
-      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.csv\>\""}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"data", "=", 
-     RowBox[{"readMachineSignal", "[", "inputFileName", "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"plot", "=", 
-     RowBox[{"plotMachineSignal", "[", "data", "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"outputFileName", "=", 
+      RowBox[{"ToString", "[", "i", "]"}], " ", "<>", " ", "\"\<.csv\>\""}]}],
+     ";", "\n", "    ", 
+    RowBox[{"data", " ", "=", " ", 
+     RowBox[{"readMachineSignal", "[", "inputFileName", "]"}]}], ";", "\n", 
+    "    ", 
+    RowBox[{"plot", " ", "=", " ", 
+     RowBox[{"plotMachineSignal", "[", "data", "]"}]}], ";", "\n", "    ", 
+    RowBox[{"outputFileName", " ", "=", " ", 
      RowBox[{
-      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.pdf\>\""}]}], ";", 
-    "\[IndentingNewLine]", 
+      RowBox[{"ToString", "[", "i", "]"}], " ", "<>", " ", "\"\<.pdf\>\""}]}],
+     ";", "\n", "    ", 
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{"FileNameJoin", "[", 
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<machineData\>\"", 
-         ",", "\"\<SignalPic\>\"", ",", "outputFileName"}], "}"}], "]"}], ",",
-       "plot"}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+         "\"\<machineData\>\"", ",", " ", "\"\<SignalPic\>\"", ",", "\n", 
+         "         ", "outputFileName"}], "}"}], "]"}], ",", " ", "plot"}], 
+     "]"}], ";", "\n", "    ", 
     RowBox[{"Print", "[", 
-     RowBox[{"\"\<Already output No.\>\"", "<>", 
-      RowBox[{"ToString", "[", "i", "]"}], "<>", 
-      "\"\< csv file Signal Diagram\>\""}], "]"}]}]}], "\[IndentingNewLine]", 
-  "]"}]], "Input",
+     RowBox[{"\"\<Already output No.\>\"", " ", "<>", " ", 
+      RowBox[{"ToString", "[", "i", "]"}], " ", "<>", " ", 
+      "\"\< csv file Signal Diagram\>\""}], "\n", "        ", "]"}]}]}], "\n",
+   "]"}]], "Input",
  CellChangeTimes->{{3.902265482999652*^9, 3.9022655132742395`*^9}, {
    3.902266362546195*^9, 3.9022663979725056`*^9}, {3.9022664373667555`*^9, 
    3.902266646974101*^9}, 3.9022667106713123`*^9, {3.902266828849697*^9, 
@@ -222,72 +229,30 @@ Cell[BoxData[
    3.9022669610307207`*^9}, {3.9022672100700893`*^9, 
    3.9022672201909037`*^9}, {3.902267819821743*^9, 3.902267902336158*^9}, {
    3.9022679344565563`*^9, 3.902267934787964*^9}, {3.9022681412808895`*^9, 
-   3.9022681476474686`*^9}},ExpressionUUID->"91a3d250-e71f-49b1-886e-\
-9ba090ba0631"],
+   3.9022681476474686`*^9}, {3.902343206618927*^9, 
+   3.902343209274062*^9}},ExpressionUUID->"d1d7e6b2-30fc-4511-8c34-\
+4e5158ce92eb"],
 
 Cell[BoxData[
  RowBox[{"Get", "[", 
   RowBox[{
-   RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+   RowBox[{"NotebookDirectory", "[", "]"}], " ", "<>", " ", 
    "\"\<readMachineSignal.wl\>\""}], "]"}]], "Input",
  CellChangeTimes->{{3.9022851986829042`*^9, 3.902285201343274*^9}, {
   3.9022853295990195`*^9, 3.902285350466443*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"7c5e2252-ce55-490b-b314-219d168786de"],
-
-Cell[CellGroupData[{
+ CellLabel->"In[1]:=",ExpressionUUID->"b15c2a6b-a2eb-4221-82b0-f90dc465635b"],
 
 Cell[BoxData[
- RowBox[{"data", "=", 
+ RowBox[{"data", " ", "=", " ", 
   RowBox[{"readMachineSignal", "[", "\"\<3.csv\>\"", "]"}]}]], "Input",
  CellChangeTimes->{{3.9022853722889023`*^9, 3.9022854027676144`*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"9296df48-d0b7-4789-a140-4d17b895ba71"],
-
-Cell[BoxData[
- TemplateBox[<|"shortenedBoxes" -> TagBox[
-     RowBox[{"{", 
-       RowBox[{
-         RowBox[{"{", 
-           
-           RowBox[{"\"index\"", ",", "\"smcAC\"", ",", "\"smcDC\"", ",", 
-             "\"vib_table\"", ",", "\"vib_spindle\"", ",", "\"AE_table\"", 
-             ",", "\"AE_spindle\"", ",", "\"\""}], "}"}], ",", 
-         RowBox[{"{", 
-           RowBox[{"1", ",", 
-             RowBox[{"-", "0.725098`"}], ",", "0.913086`", ",", "0.083008`", 
-             ",", "0.29541`", ",", "0.092773`", ",", "0.10498`"}], "}"}], ",", 
-         RowBox[{"{", 
-           RowBox[{"2", ",", 
-             RowBox[{"-", "0.715332`"}], ",", "0.834961`", ",", "0.078125`", 
-             ",", "0.296631`", ",", "0.100708`", ",", "0.119019`"}], "}"}], 
-         ",", 
-         TemplateBox[{"8995"}, "OutputSizeLimit`Skeleton"], ",", 
-         RowBox[{"{", 
-           RowBox[{"8998", ",", 
-             RowBox[{"-", "0.45166`"}], ",", "1.606445`", ",", "0.083008`", 
-             ",", "0.286865`", ",", "0.08606`", ",", "0.092773`"}], "}"}], 
-         ",", 
-         RowBox[{"{", 
-           RowBox[{"8999", ",", 
-             RowBox[{"-", "0.432129`"}], ",", "1.445312`", ",", "0.095215`", 
-             ",", "0.299072`", ",", "0.088501`", ",", "0.102539`"}], "}"}], 
-         ",", 
-         RowBox[{"{", 
-           RowBox[{"9000", ",", 
-             RowBox[{"-", "0.632324`"}], ",", "1.293945`", ",", "0.270996`", 
-             ",", "0.296631`", ",", "0.097656`", ",", "0.127563`"}], "}"}]}], 
-       "}"}], Short[#, 8]& ], "line" -> 4, "sessionID" -> 
-   25829954751634396398, "byteCount" -> 1944480, "size" -> 8, "stored" -> 
-   False, "expr" -> Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, 
-   "version" -> 1|>,
-  "OutputSizeLimitTemplate"]], "Output",
- CellChangeTimes->{{3.9022853922385654`*^9, 3.902285403904735*^9}},
- CellLabel->"Out[4]=",ExpressionUUID->"5027d80c-5772-40d5-a3c6-259a0a7417da"]
-}, Open  ]]
+ CellLabel->"In[2]:=",ExpressionUUID->"aa98dc16-db07-4167-b3b2-3f91dedb409e"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{718.5, 741},
-WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
+WindowSize->{718.5, 694.5},
+WindowMargins->{{306.75, Automatic}, {Automatic, 6}},
+WindowStatusArea->"",
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (2023\:5e747\:670824\
 \:65e5)",
 StyleDefinitions->"Default.nb",
@@ -305,20 +270,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 188, 3, 98, "Title",ExpressionUUID->"92fd93a5-3d54-4da1-a100-381a5e035690"],
-Cell[771, 27, 252, 4, 53, "Subtitle",ExpressionUUID->"bf1aebb1-1f5b-4c55-90b2-4783ae71c5d5"],
+Cell[580, 22, 188, 3, 98, "Title",ExpressionUUID->"5e7484a9-d64a-438c-9025-106927d3c606"],
+Cell[771, 27, 252, 4, 53, "Subtitle",ExpressionUUID->"e3eed2d4-ec1a-42db-84f7-b0d64eea4d82"],
 Cell[CellGroupData[{
-Cell[1048, 35, 285, 5, 67, "Section",ExpressionUUID->"08b83838-5849-401c-9d75-d6d3412dbbdc"],
-Cell[1336, 42, 336, 7, 35, "Text",ExpressionUUID->"6311fa63-39c4-4a6c-8976-558d3a651bb2"],
-Cell[1675, 51, 350, 8, 68, "Code",ExpressionUUID->"a72415c7-24fc-4e6c-a807-6d50d24331cf"],
-Cell[2028, 61, 247, 4, 35, "Text",ExpressionUUID->"9cba0299-d351-4bfc-8c33-4443eb78ca11"],
-Cell[2278, 67, 4413, 114, 754, "Input",ExpressionUUID->"70c4e031-52bd-4500-b7a1-71daabd97c1e"],
-Cell[6694, 183, 1845, 42, 262, "Input",ExpressionUUID->"91a3d250-e71f-49b1-886e-9ba090ba0631"],
-Cell[8542, 227, 348, 7, 43, "Input",ExpressionUUID->"7c5e2252-ce55-490b-b314-219d168786de"],
-Cell[CellGroupData[{
-Cell[8915, 238, 256, 4, 28, "Input",ExpressionUUID->"9296df48-d0b7-4789-a140-4d17b895ba71"],
-Cell[9174, 244, 1921, 39, 156, "Output",ExpressionUUID->"5027d80c-5772-40d5-a3c6-259a0a7417da"]
-}, Open  ]]
+Cell[1048, 35, 285, 5, 67, "Section",ExpressionUUID->"fb0cddd4-eeb9-422e-8e24-02d41492cdc5"],
+Cell[1336, 42, 336, 7, 35, "Text",ExpressionUUID->"5fbb83e2-2276-4fac-a894-93c64b4961c4"],
+Cell[1675, 51, 426, 9, 86, "Code",ExpressionUUID->"6bfda064-3f2c-4c30-9a46-70b8a62665b6"],
+Cell[2104, 62, 247, 4, 35, "Text",ExpressionUUID->"8074f8fe-fe53-4bc1-86a8-608002c08d23"],
+Cell[2354, 68, 5049, 120, 792, "Input",ExpressionUUID->"3b988dbf-582b-41f5-864c-b31e9f3a60f6"],
+Cell[7406, 190, 1990, 43, 281, "Input",ExpressionUUID->"d1d7e6b2-30fc-4511-8c34-4e5158ce92eb"],
+Cell[9399, 235, 358, 7, 43, "Input",ExpressionUUID->"b15c2a6b-a2eb-4221-82b0-f90dc465635b"],
+Cell[9760, 244, 266, 4, 28, "Input",ExpressionUUID->"aa98dc16-db07-4167-b3b2-3f91dedb409e"]
 }, Open  ]]
 }, Open  ]]
 }
