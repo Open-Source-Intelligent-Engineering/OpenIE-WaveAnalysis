@@ -1,0 +1,29 @@
+\documentclass[hyperref,9pt]{beamer}
+\usepackage{lmodern}
+\usepackage{ctex}
+% 导入超级链接包
+\usepackage{hyperref}
+% 使用Rochester主题
+\usetheme{Madrid}
+
+
+% 标题页
+\include{information}
+% 
+\begin{document}
+% 
+% 标题页 % 目录页
+\include{title}
+% 背景介绍
+\include{绪论/background}
+% 刀具磨损量预测神经网络
+\include{刀具磨损量预测神经网络/nn}
+\include{刀具磨损量预测神经网络/nn2}
+% 
+\include{边缘计算/index.tex}
+% 工业应用
+\include{工业应用/industry}
+\include{附加材料/attachment}
+% 参考文献
+\include{参考文献/paper}
+\end{document}

@@ -1,0 +1,50 @@
+% 选择LuaLaTeX为默认引擎
+% \documentclass[12pt, twoside, a4paperd]{ctexbook}
+\documentclass[12pt, twoside, a4paperd]{ctexrep}
+% \documentclass[12pt, oneside, a4paperd]{ctexrep}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+% 导言区
+
+% 导入图像包
+\usepackage{graphicx}
+% 导入超级链接包
+\usepackage{hyperref}
+%使用wallpaper宏包
+\usepackage{wallpaper} 
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{xspace}
+
+\begin{document}
+% 正文区
+% 消除超链接中的方框
+\hypersetup{hidelinks} 
+
+% 导入封面页
+\include{cover}
+% 
+\clearpage
+\phantom{s}
+\thispagestyle{empty}
+% 
+% 导入目录页
+\include{content}
+% 导入Chapter1绪论
+\include{Chapter1/introduction}
+% 导入Chapter2 神经网络介绍
+\include{Chapter2/刀具磨损预测神经网络}
+% 导入Chapter3 案例分析
+\include{Chapter3/案例分析}
+% 导入Chapter4 刀具库存模型
+\include{Chapter4/边缘计算架构}
+% 导入Chapter4 机床硬件
+\include{Chapter5/工业应用}
+\include{Chapter6/技术社区贡献}
+% 
+% 
+% 
+\include{参考文献}
+% 
+% 
+\end{document}

@@ -1,0 +1,30 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.tools": [
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+                // ,
+                // "xelatex"
+            ]
+        },
+    ],
+    "latex-workshop.intellisense.biblatexJSON.replace": {},
+    "latex-workshop.latex.recipe.default": "xelatex"
+}

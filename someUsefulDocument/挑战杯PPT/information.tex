@@ -1,0 +1,28 @@
+% 重新定义footline
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertsubsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+% 
+% 
+% 团队基本信息
+\title{基于深度学习的加工中心刀具磨损量预测} 
+\subtitle{模型原理、部署与工业应用}
+\author{\href{https://github.com/QianZeHao123/OpenIE-Algorithm}{OpenIE 开源工业工程基金会}} 
+\institute{项目官网：http://www.openie.xyz:803\\ \ \\ 代码仓库：https://github.com/QianZeHao123/OpenIE}
+% \institute{指导教师：叶正梗、李尽法、周艳杰\\ \ \\ 团队成员：钱泽昊、王晓、张紫阳、罗雯杰}
+\date{\today}
