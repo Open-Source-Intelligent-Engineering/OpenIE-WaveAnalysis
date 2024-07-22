@@ -1,0 +1,121 @@
+---
+title: "NASA Milling Dataset"
+author: "Zehao Qian"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part 1: Data Import
+
+Reach the data via: [Milling Wear \| NASA Open Data Portal](https://data.nasa.gov/Raw-Data/Milling-Wear/vjv9-9f3x/data)
+
+Put the `mill.mat` file in the same folder
+
+## Environment Setup
+
+```{r}
+# --------------------------------------------------------
+# clear the environment var area
+rm(list = ls())
+# clear all plots
+graphics.off()
+# clear the console area
+cat("\014")
+# --------------------------------------------------------
+```
+
+## Read the data with 'R.matlab' package
+
+```{r message=FALSE, warning=FALSE}
+library(R.matlab)
+mill.matlab = readMat("./mill.mat",
+                      sparseMatrixClass = c("Matrix", "SparseM", "matrix"))
+mill.data = mill.matlab[["mill"]]
+```
+
+## Define a function to extract data
+
+```{r}
+process_group = function(group) {
+  # assume that all the data is fixed
+  names = c(
+    "case",
+    "run",
+    "VB",
+    "time",
+    "DOC",
+    "feed",
+    "material",
+    "smcAC",
+    "smcDC",
+    "vib.table",
+    "vib.spindle",
+    "AE.table",
+    "AE.spindle"
+  )
+  
+  # create a data frame
+  df = data.frame(matrix(nrow = 1, ncol = length(names)))
+  colnames(df) <- names
+  
+  for (i in 1:length(names)) {
+    if (is.matrix(group[[i]]) && length(group[[i]]) > 1) {
+      # if the item is a 9000 * 1 matrix, save it as a list
+      df[[i]] = list(group[[i]])
+    } else {
+      # else, save it as its real value
+      df[[i]] = group[[i]][[1]]
+    }
+  }
+  
+  return(df)
+}
+```
+
+## Parse the mill dataset
+
+```{r}
+library(dplyr)
+# deal with all the data
+total_groups = length(mill.data) / 13
+result_list = list()
+
+for (i in 1:total_groups) {
+  start_index = (i - 1) * 13 + 1
+  end_index = i * 13
+  group = mill.data[start_index:end_index]
+  result_list[[i]] = process_group(group)
+}
+
+# put all the result in one column
+mill.data.r = bind_rows(result_list)
+
+# check the result
+# print(mill.data.r)
+```
+
+## Clear the variable table and export the data
+
+```{r}
+remove(group,
+       mill.data,
+       mill.matlab,
+       end_index,
+       i,
+       start_index,
+       total_groups,
+       process_group,
+       result_list)
+```
+
+```{r}
+save(mill.data.r, file = './r_mill_data.RData')
+```
+
+# Part 2: Explorational  Data Analysis 
+
+Coming soon...
